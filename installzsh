@@ -1,0 +1,12 @@
+#!/bin/sh
+
+apt-get install zsh
+apt-get install git-core
+
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
+
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+chsh -s `which zsh`
+
+shutdown -r 0
